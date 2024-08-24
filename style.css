@@ -20,3 +20,26 @@ html {
 .btn-software:hover {
   background-color: #199596;
 }
+
+.button-container {
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+
+.btn-form {
+  text-align: center;
+  background-color: #7CCDD2;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+.btn-form:hover {
+  background-color: #199596;
+}
