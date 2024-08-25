@@ -70,7 +70,7 @@
     <script src="script.js"></script>
     <br>
   
-  <section style="margin-left: 20px; margin-right: 20px;">
+  <section style="margin-left: 20px;">
     <div style="text-align: center;" class="card-body">
       <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#7CCDD2"><path d="m780-339-42-43 68-68H640v-59h165l-68-68 43-43 140 140.5L780-339ZM80-780v-60h480v60H80Zm190 510h100v-100h100v-100H370v-100H270v100H170v100h100v100ZM100-120q-24 0-42-18t-18-42v-480q0-24 18-42t42-18h440q24 0 42 18t18 42v480q0 24-18 42t-42 18H100Zm0-60h440v-480H100v480Zm220-240Z"/></svg>
       <br>                      
@@ -78,10 +78,21 @@
         <br>
         <br>
     </div>
+    <section style="margin-left: 10px; margin-right: 10px;">
+      <br>
+        <a 
+          href="consultar.html" 
+          class="btn-software" 
+          style="width: 100%;">
+          Consultar
+        </a>
+      <br>
+      </section>
+    <br>
     <div class="container">
         <h1 style="color:#7CCDD2;">Registrar Urgencia</h1>
         <br>
-        <form action="#" method="post">
+        <form action="/submit" method="post">
           <label for="fecha_ingreso">Fecha de Ingreso:</label>
           <input type="datetime-local" name="fecha_ingreso" required>
           <br>
@@ -94,7 +105,7 @@
           <input type="text" id="identityNumber" name="identityNumber" placeholder="Ingrese su número de identidad" required>
           <br>
           <br>
-          <div style="width: calc(100% - 40px); box-sizing: border-box;">
+          <div style="width: calc(100% - 20px); box-sizing: border-box;">
             <label for="textInput">Ingrese Detalle de consulta:</label>
             <textarea style="width: 100%; height: 100%; box-sizing: border-box;" id="textInput" name="textInput" placeholder="..." required></textarea>
           </div>
@@ -131,10 +142,103 @@
           </div>
         </form>
     </div>
+    <br>
+    <hr>
+    <br>
+    <div class="container">
+      <h1 style="color:#7CCDD2;">Registrar Atención Primaria</h1>
+      <br>
+      <form action="/submit" method="post">
+        <label for="presion">Presión Arterial:</label>
+        <input type="text" name="presion" required>
+        <label for="temperatura">Temperatura:</label>
+        <input type="text" name="temperatura" required>
+        <label for="peso">Peso:</label>
+        <input type="text" name="peso">
+        <label for="estatura">Estatura:</label>
+        <input type="text" name="temperatura">
 
-
-
+        <br>
+        <br>
+        <div style="width: calc(100% - 20px); box-sizing: border-box;">
+          <label for="textInput">Ingrese Detalle de consulta:</label>
+          <textarea style="width: 100%; height: 100%; box-sizing: border-box;" id="textInput" name="textInput" placeholder="..."></textarea>
+        </div>
+        <br>
+        <br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+          <label class="form-check-label" for="flexRadioDefault0">
+            Atención Inmediata
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Urgente
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Importante
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+          <label class="form-check-label" for="flexRadioDefault3">
+            No Urgente
+          </label>
+        </div>
+        <br>
+        <br>
+        <div class="button-container">
+          <input class="btn-form" type="submit" value="Registrar Atención Primaria">
+        </div>
+      </form>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="container">
+      <h1 style="color:#7CCDD2;">Registrar Atención Box</h1>
+      <br>
+      <form action="/submit" method="post">
+        <label for="box">N° Box:</label>
+        <input type="text" name="box" required>
+        <label for="medico">Nombre Médico:</label>
+        <input type="text" name="medico" required>
+        <br>
+        <br>
+        <div style="width: calc(100% - 20px); box-sizing: border-box;">
+          <label for="textInput">Detalle de Atención:</label>
+          <textarea style="width: 100%; height: 100%; box-sizing: border-box;" id="textInput" name="textInput" placeholder="..."></textarea>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Destino:</option>
+              <option value="1">Alta Médica</option>
+              <option value="2">Hospitalización</option>
+              <option value="3">Cirujia</option>
+            </select>
+          </div>
+          <div class="col-sm-6">
+            <label for="fecha_ingreso">Fecha de Salida de Urgencia:</label>
+            <input type="datetime-local" name="fecha_ingreso" required>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="button-container">
+          <input class="btn-form" type="submit" value="Registrar Atención Primaria">
+        </div>
+      </form>
+    </div>
     </section>
+    <br>
     <br>
     <footer style="background-color: black;">
         <div style="margin-left: 20px; margin-right: 20px; text-align: center;">

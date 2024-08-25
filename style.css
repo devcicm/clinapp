@@ -9,7 +9,7 @@ html {
   background-color: #7CCDD2;
   color: #fff;
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -22,7 +22,7 @@ html {
 }
 
 .button-container {
-  width: calc(100% - 40px);
+  width: calc(100% - 20px);
   box-sizing: border-box;
 }
 
