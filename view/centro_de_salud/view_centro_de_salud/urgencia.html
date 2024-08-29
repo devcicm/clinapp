@@ -92,7 +92,7 @@
     <div class="container">
       <h1 style="color:#7CCDD2;">Registrar Urgencia</h1>
       <br>
-      <form action="/submit" method="post">
+      <form action="" method="post">
         <label for="fecha_ingreso">Fecha de Ingreso:</label>
         <input type="datetime-local" name="fecha_ingreso" required>
         <br>
@@ -269,6 +269,29 @@
           </form>
         </div>
       </section>
+  
+      <script>
+      document.querySelector('form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData.entries());
+
+        fetch('http://localhost:3000/records', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Record created:', data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+      });
+      </script>
+-->
     <br>
     <br>
     <footer style="background-color: black;">
