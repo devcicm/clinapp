@@ -142,9 +142,9 @@
         <h1 style="color:#7CCDD2;">Registrar Atención Primaria</h1>
         <br>
           <label for="presion">Presión Arterial:</label>
-          <input type="text" name="presion" required>
+          <input type="text" name="presion">
           <label for="temperatura">Temperatura:</label>
-          <input type="text" name="temperatura" required>
+          <input type="text" name="temperatura">
           <label for="peso">Peso:</label>
           <input type="text" name="peso">
           <label for="estatura">Estatura:</label>
@@ -161,14 +161,113 @@
           <h1 style="color:#7CCDD2;">Registrar Atención Box</h1>
           <br>
             <label for="box">N° Box:</label>
-            <input type="text" name="box" required>
+            <input type="text" name="box">
             <label for="medico">Nombre Médico:</label>
-            <input type="text" name="medico" required>
+            <input type="text" name="medico">
             <br>
             <br>
             <div style="width: calc(100% - 20px); box-sizing: border-box;">
               <label for="textInput">Detalle de Atención:</label>
               <textarea style="width: 100%; height: 100%; box-sizing: border-box;" id="textInput" name="textInput" placeholder="..."></textarea>
+            </div>
+            <br>
+            <br>
+            <div style="width: calc(100% - 20px); box-sizing: border-box;">
+              <label for="textInput">Laboratorio:</label>
+              <br>
+              <br>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+                <label class="form-check-label" for="flexRadioDefault0">
+                  No
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+                <label class="form-check-label" for="flexRadioDefault0">
+                  Exámen 1
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Exámen 2
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Exámen 3
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                  Exámen 4
+                </label>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div style="width: calc(100% - 20px); box-sizing: border-box;">
+              <label for="textInput">Exámen:</label>
+              <br>
+              <br>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+                <label class="form-check-label" for="flexRadioDefault0">
+                  No
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+                <label class="form-check-label" for="flexRadioDefault0">
+                  Exámen 1
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Exámen 2
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Exámen 3
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                  Exámen 4
+                </label>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div style="width: calc(100% - 20px); box-sizing: border-box;">
+              <label for="textInput">Farmacia:</label>
+              <textarea style="width: 100%; height: 100%; box-sizing: border-box;" id="textInput" name="textInput" placeholder="..."></textarea>
+            </div>
+            <br>
+            <br
+            <div style="width: calc(100% - 20px); box-sizing: border-box;">
+              <label for="textInput">Licencia:</label>
+              <br>
+              <br>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+                <label class="form-check-label" for="flexRadioDefault0">
+                  No
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                  Si
+                </label>
+              </div>
             </div>
             <br>
             <br>
@@ -183,7 +282,7 @@
               </div>
               <div class="col-sm-6">
                 <label for="fecha_ingreso">Fecha de Salida de Urgencia:</label>
-                <input type="datetime-local" name="fecha_ingreso" required>
+                <input type="datetime-local" name="fecha_ingreso">
               </div>
             </div>
             <br>

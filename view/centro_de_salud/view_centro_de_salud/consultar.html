@@ -89,7 +89,7 @@
         </div>
       </form>
       <br>
-        <p>Aqui debe ir una lista con los pacientes categorizados en la sección de urgente; para ser llamados por la enfermera para rellenar los soguientes campos: (cabe destacar que el último campo de esta sección actualiza el campo de la actualización).</p>
+        <p>Aqui debe ir una lista con los pacientes categorizados en la sección de urgente; para ser llamados por la enfermera para rellenar los siguientes campos: (cabe destacar que el último campo de esta sección actualiza el campo de la actualización). <b>Esta es la parte del CRUD que actualiza la base de datos</b></p>
       <br>
       </section>
     <br>
@@ -97,9 +97,9 @@
     <hr>
     <br>
     <div class="container">
+      <br>
       <h1 style="color:#7CCDD2;">Registrar Atención Primaria</h1>
       <br>
-      <form action="/submit" method="post">
         <label for="presion">Presión Arterial:</label>
         <input type="text" name="presion" required>
         <label for="temperatura">Temperatura:</label>
@@ -108,7 +108,6 @@
         <input type="text" name="peso">
         <label for="estatura">Estatura:</label>
         <input type="text" name="temperatura">
-
         <br>
         <br>
         <div style="width: calc(100% - 20px); box-sizing: border-box;">
@@ -116,79 +115,143 @@
           <textarea style="width: 100%; height: 100%; box-sizing: border-box;" id="textInput" name="textInput" placeholder="..."></textarea>
         </div>
         <br>
+        <hr>
         <br>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
-          <label class="form-check-label" for="flexRadioDefault0">
-            Atención Inmediata
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-          <label class="form-check-label" for="flexRadioDefault1">
-            Urgente
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-          <label class="form-check-label" for="flexRadioDefault2">
-            Importante
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-          <label class="form-check-label" for="flexRadioDefault3">
-            No Urgente
-          </label>
-        </div>
+        <h1 style="color:#7CCDD2;">Registrar Atención Box</h1>
         <br>
-        <br>
-        <div class="button-container">
-          <input class="btn-form" type="submit" value="Registrar Atención Primaria">
-        </div>
-      </form>
-    </div>
-    <br>
-    <hr>
-    <br>
-    <div class="container">
-      <h1 style="color:#7CCDD2;">Registrar Atención Box</h1>
-      <br>
-      <form action="/submit" method="post">
-        <label for="box">N° Box:</label>
-        <input type="text" name="box" required>
-        <label for="medico">Nombre Médico:</label>
-        <input type="text" name="medico" required>
-        <br>
-        <br>
-        <div style="width: calc(100% - 20px); box-sizing: border-box;">
-          <label for="textInput">Detalle de Atención:</label>
-          <textarea style="width: 100%; height: 100%; box-sizing: border-box;" id="textInput" name="textInput" placeholder="..."></textarea>
-        </div>
-        <br>
-        <br>
-        <div class="row">
-          <div class="col-sm-6 mb-3 mb-sm-0">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Destino:</option>
-              <option value="1">Alta Médica</option>
-              <option value="2">Hospitalización</option>
-              <option value="3">Cirujia</option>
-            </select>
+          <label for="box">N° Box:</label>
+          <input type="text" name="box" required>
+          <label for="medico">Nombre Médico:</label>
+          <input type="text" name="medico" required>
+          <br>
+          <br>
+          <div style="width: calc(100% - 20px); box-sizing: border-box;">
+            <label for="textInput">Detalle de Atención:</label>
+            <textarea style="width: 100%; height: 100%; box-sizing: border-box;" id="textInput" name="textInput" placeholder="..."></textarea>
           </div>
-          <div class="col-sm-6">
-            <label for="fecha_ingreso">Fecha de Salida de Urgencia:</label>
-            <input type="datetime-local" name="fecha_ingreso" required>
+          <br>
+          <br>
+          <div style="width: calc(100% - 20px); box-sizing: border-box;">
+            <label for="textInput">Laboratorio:</label>
+            <br>
+            <br>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+              <label class="form-check-label" for="flexRadioDefault0">
+                No
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+              <label class="form-check-label" for="flexRadioDefault0">
+                Exámen 1
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Exámen 2
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Exámen 3
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                Exámen 4
+              </label>
+            </div>
           </div>
-        </div>
-        <br>
-        <br>
-        <div class="button-container">
-          <input class="btn-form" type="submit" value="Registrar Atención Primaria">
-        </div>
-      </form>
-    </div>
-    </section>
+          <br>
+          <br>
+          <div style="width: calc(100% - 20px); box-sizing: border-box;">
+            <label for="textInput">Exámen:</label>
+            <br>
+            <br>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+              <label class="form-check-label" for="flexRadioDefault0">
+                No
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+              <label class="form-check-label" for="flexRadioDefault0">
+                Exámen 1
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Exámen 2
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Exámen 3
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                Exámen 4
+              </label>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div style="width: calc(100% - 20px); box-sizing: border-box;">
+            <label for="textInput">Farmacia:</label>
+            <textarea style="width: 100%; height: 100%; box-sizing: border-box;" id="textInput" name="textInput" placeholder="..."></textarea>
+          </div>
+          <br>
+          <br
+          <div style="width: calc(100% - 20px); box-sizing: border-box;">
+            <label for="textInput">Licencia:</label>
+            <br>
+            <br>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault0">
+              <label class="form-check-label" for="flexRadioDefault0">
+                No
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                Si
+              </label>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Destino:</option>
+                <option value="1">Alta Médica</option>
+                <option value="2">Hospitalización</option>
+                <option value="3">Cirujia</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <label for="fecha_ingreso">Fecha de Salida de Urgencia:</label>
+              <input type="datetime-local" name="fecha_ingreso" required>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="button-container">
+            <input class="btn-form" type="submit" value="Registrar Urgencia">
+          </div>
+        </form>
+      </div>
+      </section>
     <br>
     <br>
     <footer style="background-color: black;">
