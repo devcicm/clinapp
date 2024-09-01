@@ -1,0 +1,75 @@
+/* Estilo para la tabla */
+#contenedorTabla table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#contenedorTabla th, #contenedorTabla td {
+    border: 1px solid #6d7e89;
+    padding: 12px;
+    text-align: left;
+    color: white;
+}
+
+#contenedorTabla th {
+    background-color: #6d7e89;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#contenedorTabla td {
+    background-color: #7CCDD2;
+    color: #000000;
+}
+
+#contenedorTabla tr:nth-child(even) td {
+    background-color: #6d7e89;
+    color: #ffffff;
+}
+
+#contenedorTabla tr:hover td {
+    background-color: #6d7e89;
+    color: #ffffff;
+}
+
+/* Estilo para el botón de eliminar */
+.btn-eliminar {
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #FF4500;
+}
+
+/* Estilo para la paginación */
+.pagination a {
+    color: #ffffff;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #6d7e89;
+    margin: 4px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a.active {
+    background-color: #7CCDD2;
+    color: #000000;
+}
+
+.pagination a:hover {
+    background-color: #7CCDD2;
+    color: #000000;
+}
