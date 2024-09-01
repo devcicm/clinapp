@@ -93,6 +93,15 @@
       <br>
         <p>Aqui debe ir una lista con los pacientes categorizados en la sección de urgente; para ser llamados por la enfermera para rellenar los siguientes campos: (cabe destacar que el último campo de esta sección actualiza el campo de la actualización). <b>Esta es la parte del CRUD que actualiza la base de datos</b></p>
         <div id="TContain">
+          <label for="selectPrioridad">Prioridad de Consulta: Eliga prioridad</label>
+  <select id="selectPrioridad">
+    <option value="Todos">Todos</option>
+    <option value="Atención Inmediata">Atención Inmediata</option>
+    <option value="Urgente">Urgente</option>
+    <option value="Importante">Importante</option>
+    <option value="No Urgente">No Urgente</option>
+  </select>
+  <label id="consultamsg" style="display: none; color: red;">No se encontraron registros</label>
           <table id="contenedorTabla">
               <thead>
                   <!-- Encabezados de columna de tu tabla -->
@@ -304,15 +313,35 @@
           }
         }
       }
-      //obtiene los registros por prioridad
-     registros = DbLocalStoreInstance.getRecordsByPropertieId('flexRadioDefault', 'Urgente');
-        
- 
-                        cargarTablaConPaginacion(registros, registrosPorPagina, paginaActual);
-                        generarControlesPaginacion(registros.length, registrosPorPagina);
+     
     }
 
+    document.getElementById('selectPrioridad').addEventListener('change', function () {
+    const prioridadSeleccionada = this.value;
 
+    // Obtiene los registros según la prioridad seleccionada
+    if (prioridadSeleccionada !== 'Todos') {
+        registros = DbLocalStoreInstance.getRecordsByPropertieId('flexRadioDefault', prioridadSeleccionada);
+       
+    } else {
+        registros = DbLocalStoreInstance.getRecords();
+    }
+
+    // Muestra u oculta el mensaje de "No se encontraron registros"
+    const consultaMsg = document.getElementById('consultamsg');
+    if (registros.length === 0) {
+        consultaMsg.style.display = 'block';
+    } else {
+        consultaMsg.style.display = 'none';
+    }
+
+    // Cargar los registros en la tabla con paginación
+    cargarTablaConPaginacion(registros, registrosPorPagina, paginaActual);
+    generarControlesPaginacion(registros.length, registrosPorPagina);
+});
+
+
+     
 
     ////////////////////////////////////////////
 
