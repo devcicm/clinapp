@@ -400,56 +400,8 @@
                 });
             }
 
-            function eliminarRegistro(idRegistro) {
-    const index = registros.findIndex(registro => registro.identityNumber == idRegistro);
-    if (index !== -1) {
-        registros.splice(index, 1);
-
-        // Verificar si la página actual tiene registros después de eliminar
-        const totalRegistros = registros.length;
-        const totalPaginas = Math.ceil(totalRegistros / registrosPorPagina);
-
-        // Si la página actual está vacía y no es la primera página, retroceder una página
-        if (paginaActual > totalPaginas) {
-            paginaActual = totalPaginas;
-        }
-
-        cargarTablaConPaginacion(registros, registrosPorPagina, paginaActual);
-        generarControlesPaginacion(totalRegistros, registrosPorPagina);
-    }
-}
-
-
-            $('#btnInsertar').on('click', function() {
-                const nuevoRegistro = {
-    "fecha_ingreso": "2024-08-31T23:03",
-    "nombre": "Carlos Iván",
-    "apellido": "asd",
-    "identityNumber": "121",
-    "textInput": "asd",
-    "flexRadioDefault": "Urgente",
-    "presion": "asd",
-    "temperatura": "asd",
-    "peso": "a",
-    "estatura": "asd",
-    "detalleConsultaPrimaria": "asd",
-    "box": "asd",
-    "medico": "asd",
-    "detalleAtencion": "asd",
-    "laboratorio": "Exámen 2",
-    "examen": "Exámen 2",
-    "farmacia": "asdasd",
-    "licencia": "Si",
-    "destino": "Alta Médica",
-    "fecha_salida": "2024-08-31T22:04"
-};
-
-                registros.push(nuevoRegistro);
-                DbLocalStoreInstance.addRecord(nuevoRegistro);
-                cargarTablaConPaginacion(registros, registrosPorPagina, paginaActual);
-                generarControlesPaginacion(registros.length, registrosPorPagina);
-            });
-
+           
+        
 
 
 
@@ -507,9 +459,57 @@
 
 
 
+        function eliminarRegistro(idRegistro) {
+    const index = registros.findIndex(registro => registro.identityNumber == idRegistro);
+    if (index !== -1) {
+        registros.splice(index, 1);
+
+        // Verificar si la página actual tiene registros después de eliminar
+        const totalRegistros = registros.length;
+        const totalPaginas = Math.ceil(totalRegistros / registrosPorPagina);
+
+        // Si la página actual está vacía y no es la primera página, retroceder una página
+        if (paginaActual > totalPaginas) {
+            paginaActual = totalPaginas;
+        }
+
+        cargarTablaConPaginacion(registros, registrosPorPagina, paginaActual);
+        generarControlesPaginacion(totalRegistros, registrosPorPagina);
+    }
+}
 
 
 
+
+        $('#btnInsertar').on('click', function() {
+                const nuevoRegistro = {
+    "fecha_ingreso": "2024-08-31T23:03",
+    "nombre": "Carlos Iván",
+    "apellido": "asd",
+    "identityNumber": "121",
+    "textInput": "asd",
+    "flexRadioDefault": "Urgente",
+    "presion": "asd",
+    "temperatura": "asd",
+    "peso": "a",
+    "estatura": "asd",
+    "detalleConsultaPrimaria": "asd",
+    "box": "asd",
+    "medico": "asd",
+    "detalleAtencion": "asd",
+    "laboratorio": "Exámen 2",
+    "examen": "Exámen 2",
+    "farmacia": "asdasd",
+    "licencia": "Si",
+    "destino": "Alta Médica",
+    "fecha_salida": "2024-08-31T22:04"
+};
+
+                registros.push(nuevoRegistro);
+                DbLocalStoreInstance.addRecord(nuevoRegistro);
+                cargarTablaConPaginacion(registros, registrosPorPagina, paginaActual);
+                generarControlesPaginacion(registros.length, registrosPorPagina);
+            });
 
 
 
