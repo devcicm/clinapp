@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Datos</title>
+    <link rel="stylesheet" href="/Builder/table.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Div contenedor para la tabla -->
+    <div class="table-container">
+        <table id="contenedorTabla">
+            <thead>
+                <!-- Encabezados de columna de tu tabla -->
+            </thead>
+            <tbody>
+                <!-- Filas de datos de tu tabla -->
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination" id="pagination-container">
+        <!-- Controles de paginación se generarán aquí -->
+    </div>
+    <script src="/Builder/tableUtils.js"></script>
+    <script src="/Builder/paginationUtils.js"></script>
+    <script src="/Builder/formatoUtils.js"></script>
+    <script src="/Builder/eventHandlers.js"></script>
+    <script>
+        const registrosPorPagina = 6;
+        let paginaActual = 1;
+        let filaEnEdicion = null;
+
+        // JSON puro
+        const registros = [{
+            "Fecha de Ingreso": "2024-08-31T23:03",
+            "Nombre": "Carlos Iván",
+            "Apellido": "Cruz Mendoza",
+            "IdentityNumber": "1",
+            "Peso": "92",
+            "Estatura": "179",
+            "Prioridad": "Urgente",
+            "Fecha de Salida": "2024-08-31T23:03"
+        },
+        {
+            "Fecha de Ingreso": "2024-08-31T23:03",
+            "Nombre": "Carlos Iván",
+            "Apellido": "Cruz Mendoza",
+            "IdentityNumber": "1",
+            "Peso": "92",
+            "Estatura": "179",
+            "Prioridad": "Urgente",
+            "Fecha de Salida": "2024-08-31T23:03"
+        },
+        {
+            "Fecha de Ingreso": "2024-08-31T23:03",
+            "Nombre": "Carlos Iván",
+            "Apellido": "Cruz Mendoza",
+            "IdentityNumber": "1",
+            "Peso": "92",
+            "Estatura": "179",
+            "Prioridad": "Urgente",
+            "Fecha de Salida": "2024-08-31T23:03"
+        }];
+
+        cargarTablaConPaginacion(registros, registrosPorPagina, paginaActual, false);
+        generarControlesPaginacion(Object.keys(registros).length, registrosPorPagina);
+
+    </script>
+</body>
+
+</html>

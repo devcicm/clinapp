@@ -5,501 +5,168 @@
     <meta name="viewport" content="width=device-width" />
     <title>Clinapp</title>
     <link href="/style.css" rel="stylesheet" type="text/css" />
-    <meta
-      property="og:image"
-      content="https://clinapp.vercel.app/static/icon/clinapp.png"
-    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:image" content="https://clinapp.vercel.app/static/icon/clinapp.png" />
     <meta property="og:image:width" content="389px" />
     <meta property="og:image:height" content="542px" />
+
     <meta property="keywords" content="#" />
-    <meta
-      name="description"
-      content="Clinapp tu Software de Gestión Hospitalaría más Flexible del Mercado"
-    />
+    <meta name="description" content="Clinapp tu Software de Gestión Hospitalaría más Flexible del Mercado" />
 
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Clinapp" />
-    <meta
-      itemprop="description"
-      content="Clinapp tu Software de Gestión Hospitalaría más Flexible del Mercado"
-    />
+    <meta itemprop="description" content="Clinapp tu Software de Gestión Hospitalaría más Flexible del Mercado" />
 
-    <!-- Link -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/static/icon/clinapp.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/static/icon/clinapp.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href="/static/icon/clinapp.png"
-    />
+    <!-- Icons and Manifest -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/icon/clinapp.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/static/icon/clinapp.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/static/icon/clinapp.png" />
     <link rel="icon" type="image/x-icon" href="" />
     <link rel="manifest" href="/static/icon/clinapp.png" />
 
-    <!-- bootstraps -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/style.css" />
   </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .modal-icon {
+      width: 50px;
+      height: 50px;
+    }
+    .modal-header {
+      text-align: center;
+    }
+  </style>
   <header>
-    <nav style="background-color: #6d7e89" class="navbar">
+    <nav class="navbar" style="background-color: #6d7e89">
       <div class="container-fluid">
         <a class="navbar-brand" href="/view/centro_de_salud/centro_medico.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="48px"
-            viewBox="0 -960 960 960"
-            width="48px"
-            fill="#7CCDD2"
-          >
-            <path
-              d="m274-450 248 248-42 42-320-320 320-320 42 42-248 248h526v60H274Z"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#7CCDD2">
+            <path d="m274-450 248 248-42 42-320-320 320-320 42 42-248 248h526v60H274Z" />
           </svg>
           <b style="color: white">Volver</b>
         </a>
         <a class="navbar-brand" href="/view/centro_de_salud/centro_medico.html">
-          <img
-            src="/static/icon/centro_medico.jpg"
-            alt="icon_cs"
-            width="100px"
-            height="100px"
-          />
+          <img src="/static/icon/centro_medico.jpg" alt="icon_cs" width="100px" height="100px" />
           <b style="color: white">Centro Médico</b>
         </a>
       </div>
     </nav>
+    <link rel="stylesheet" href="/DFH/styleBodyViews.css">
   </header>
-  <body onload="LoadConfig()">
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"
-    ></script>
+
+  <body >
+    <div id="modalContainer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
     <br />
 
     <section style="margin-left: 20px">
-      <div style="text-align: center" class="card-body">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="48px"
-          viewBox="0 -960 960 960"
-          width="48px"
-          fill="#7CCDD2"
-        >
-          <path
-            d="m780-339-42-43 68-68H640v-59h165l-68-68 43-43 140 140.5L780-339ZM80-780v-60h480v60H80Zm190 510h100v-100h100v-100H370v-100H270v100H170v100h100v100ZM100-120q-24 0-42-18t-18-42v-480q0-24 18-42t42-18h440q24 0 42 18t18 42v480q0 24-18 42t-42 18H100Zm0-60h440v-480H100v480Zm220-240Z"
-          />
+      <div class="card-body" style="text-align: center">
+        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#7CCDD2">
+          <path d="m780-339-42-43 68-68H640v-59h165l-68-68 43-43 140 140.5L780-339ZM80-780v-60h480v60H80Zm190 510h100v-100h100v-100H370v-100H270v100H170v100h100v100ZM100-120q-24 0-42-18t-18-42v-480q0-24 18-42t42-18h440q24 0 42 18t18 42v480q0 24-18 42t-42 18H100Zm0-60h440v-480H100v480Zm220-240Z" />
         </svg>
         <br />
-        <b style="color: #6d7e89" class="card-text">Urgencia</b>
-        <br />
-        <br />
+        <b class="card-text" style="color: #6d7e89">Urgencia</b>
+        <br /><br />
       </div>
-      <section style="margin-left: 10px; margin-right: 10px">
-        <br />
-        <a href="consultar.html" class="btn-software" style="width: 100%">
-          Consultar
-        </a>
-        <br />
+
+      <section style="margin: 10px 10px">
+        <a href="consultar.html" class="btn-software" style="width: 100%">Consultar</a>
       </section>
+
       <br />
+
       <div class="container">
-        <h1 style="color: #7ccdd2" id="Registrar Urgencia">
-          Registrar Urgencia
-        </h1>
-        <br />
+       
+
         <form id="urgenciaForm" action="" method="post">
-          <div id="FrmRegistroUrgencia">
-            <label for="fecha_ingreso">Fecha de Ingreso:</label>
-            <input
-              type="datetime-local"
-              name="fecha_ingreso"
-              id="fecha_ingreso"
-              required
-            />
-            <br />
-            <br />
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" id="nombre" required />
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" id="apellido" required />
-            <label for="identityNumber">RUN:</label>
-            <input
-              type="text"
-              id="identityNumber"
-              name="identityNumber"
-              placeholder="Ingrese su número de identidad"
-              required
-            />
-            <br />
-            <br />
-            <div style="width: calc(100% - 20px); box-sizing: border-box">
-              <label for="textInput">Ingrese Detalle de consulta:</label>
-              <textarea
-                style="width: 100%; height: 100%; box-sizing: border-box"
-                id="textInput"
-                name="textInput"
-                placeholder="..."
-                required
-              ></textarea>
-            </div>
-            <br />
-            <br />
-            <section>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="0"
-                  value="Atención Inmediata"
-                />
-                <label class="form-check-label" for="0">
-                  Atención Inmediata
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="1"
-                  value="Urgente"
-                />
-                <label class="form-check-label" for="1"> Urgente </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="2"
-                  value="Importante"
-                  checked
-                />
-                <label class="form-check-label" for="2"> Importante </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="3"
-                  value="No Urgente"
-                />
-                <label class="form-check-label" for="3"> No Urgente </label>
-              </div>
-            </section>
-            <br />
-            <br />
-            <hr />
-            <br />
-          </div>
-          <div>
-            <h1 style="color: #7ccdd2" id="Registrar Atención Primaria">
-              Registrar Atención Primaria
-            </h1>
-            <br />
-            <label for="presion">Presión Arterial:</label>
-            <input type="text" name="presion" id="presion" />
-            <label for="temperatura">Temperatura:</label>
-            <input type="text" name="temperatura" id="temperatura" />
-            <label for="peso">Peso:</label>
-            <input type="text" name="peso" id="peso" />
-            <label for="estatura">Estatura:</label>
-            <input type="text" name="estatura" id="estatura" />
-            <br />
-            <br />
-            <div style="width: calc(100% - 20px); box-sizing: border-box">
-              <label for="detalleConsultaPrimaria"
-                >Ingrese Detalle de consulta:</label
-              >
-              <textarea
-                style="width: 100%; height: 100%; box-sizing: border-box"
-                id="detalleConsultaPrimaria"
-                name="detalleConsultaPrimaria"
-                placeholder="..."
-              ></textarea>
-            </div>
-            <br />
-            <hr />
-            <br />
-          </div>
-          <div>
-            <h1 style="color: #7ccdd2" id="Registrar Atención Box">
-              Registrar Atención Box
-            </h1>
-            <br />
-            <label for="box">N° Box:</label>
-            <input type="text" name="box" id="box" />
-            <label for="medico">Nombre Médico:</label>
-            <input type="text" name="medico" id="medico" />
-            <br />
-            <br />
-            <div style="width: calc(100% - 20px); box-sizing: border-box">
-              <label for="detalleAtencion">Detalle de Atención:</label>
-              <textarea
-                style="width: 100%; height: 100%; box-sizing: border-box"
-                id="detalleAtencion"
-                name="detalleAtencion"
-                placeholder="..."
-              ></textarea>
-            </div>
-            <br />
-            <br />
-            <div style="width: calc(100% - 20px); box-sizing: border-box">
-              <label for="laboratorio">Laboratorio:</label>
-              <br />
-              <br />
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="laboratorio0"
-                  name="laboratorio"
-                  value="No"
-                />
-                <label class="form-check-label" for="laboratorio0">No</label>
-              </div>
-              <br />
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="laboratorio1"
-                  name="laboratorio"
-                  value="Exámen 1"
-                />
-                <label class="form-check-label" for="laboratorio1"
-                  >Exámen 1</label
-                >
-              </div>
-              <br />
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="laboratorio2"
-                  name="laboratorio"
-                  value="Exámen 2"
-                />
-                <label class="form-check-label" for="laboratorio2"
-                  >Exámen 2</label
-                >
-              </div>
-              <br />
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="laboratorio3"
-                  name="laboratorio"
-                  value="Exámen 3"
-                />
-                <label class="form-check-label" for="laboratorio3"
-                  >Exámen 3</label
-                >
-              </div>
-            </div>
-            <br />
-            <br />
-            <div style="width: calc(100% - 20px); box-sizing: border-box">
-              <label for="examen">Exámen:</label>
-              <br />
-              <br />
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="examen0"
-                  name="examen"
-                  value="No"
-                />
-                <label class="form-check-label" for="examen0">No</label>
-              </div>
-              <br />
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="examen1"
-                  name="examen"
-                  value="Exámen 1"
-                />
-                <label class="form-check-label" for="examen1">Exámen 1</label>
-              </div>
-              <br />
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="examen2"
-                  name="examen"
-                  value="Exámen 2"
-                />
-                <label class="form-check-label" for="examen2">Exámen 2</label>
-              </div>
-              <br />
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="examen3"
-                  name="examen"
-                  value="Exámen 3"
-                />
-                <label class="form-check-label" for="examen3">Exámen 3</label>
-              </div>
-            </div>
-            <br />
-            <br />
-            <div style="width: calc(100% - 20px); box-sizing: border-box">
-              <label for="farmacia">Farmacia:</label>
-              <textarea
-                style="width: 100%; height: 100%; box-sizing: border-box"
-                id="farmacia"
-                name="farmacia"
-                placeholder="..."
-              ></textarea>
-            </div>
-            <br />
-            <br />
-            <div style="width: calc(100% - 20px); box-sizing: border-box">
-              <label for="licencia">Licencia:</label>
-              <br />
-              <br />
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="licencia"
-                  id="licencia1"
-                  value="Si"
-                />
-                <label class="form-check-label" for="licencia1">Si</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="licencia"
-                  id="licencia2"
-                  value="No"
-                />
-                <label class="form-check-label" for="licencia2">No</label>
-              </div>
-            </div>
-            <br />
-            <br />
-            <div class="row">
-              <div class="col-sm-6 mb-3 mb-sm-0">
-                <select
-                  class="form-select"
-                  aria-label="Default select example"
-                  id="destino"
-                  name="destino"
-                >
-                  <option selected>Destino:</option>
-                  <option value="Alta Médica">Alta Médica</option>
-                  <option value="Hospitalización">Hospitalización</option>
-                  <option value="Cirugía">Cirugía</option>
-                </select>
-              </div>
-              <div class="col-sm-6">
-                <label for="fecha_salida">Fecha de Salida de Urgencia:</label>
-                <input
-                  type="datetime-local"
-                  name="fecha_salida"
-                  id="fecha_salida"
-                />
-              </div>
-            </div>
-            <br />
-            <br />
-          </div>
+          <div id="containerRU" class="form-container"></div>
+   
+          <hr /><br />
+          <div id="containerRAP" class="form-container"></div>
+     
+          <hr /><br />
+          <div id="containerRAB" class="form-container"></div>
+
           <div class="button-container">
             <input class="btn-form" type="submit" value="Registrar Urgencia" />
           </div>
         </form>
       </div>
     </section>
-    <script src="/data/DbLocalStore.js"></script>
-    <script>
-      let DbLocalStoreInstance = null;
-      function LoadConfig() {
-        DbLocalStoreInstance = DbLocalStore.getInstance("dbLocalStore");
-      }
 
-      document
-        .querySelector("form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
+    <br /><br />
 
-          // Captura los datos del formulario
-          const formData = new FormData(event.target);
-          const data = Object.fromEntries(formData.entries());
-
-          // Muestra los datos capturados en la consola
-          console.log("Estos son los datos del formulario:");
-          console.log(data);
-          DbLocalStoreInstance.addRecord(data);
-          // Reinsertar los datos en los campos del formulario
-          for (const [key, value] of Object.entries(data)) {
-            const element = document.querySelector(`[name="${key}"]`);
-            if (element) {
-              if (element.type === "radio" || element.type === "checkbox") {
-                document.querySelector(
-                  `[name="${key}"][value="${value}"]`
-                ).checked = true;
-              } else {
-                element.value = value;
-              }
-            }
-          }
-        });
-    </script>
-
-    <br />
-    <br />
     <footer style="background-color: black">
-      <div style="margin-left: 20px; margin-right: 20px; text-align: center">
+      <div style="margin: 0 20px; text-align: center">
         <br />
         <img src="/static/icon/softhispan.jpg" width="100px" height="100px" />
         <p>
-          <b style="color: white"
-            >© Copyright 2024 Desarrollado por Softhispan</b
-          >
+          <b style="color: white">© Copyright 2024 Desarrollado por Softhispan</b>
         </p>
         <br />
       </div>
     </footer>
 
-    <!-- Enlace a Bootstrap JS y dependencias -->
+    <script src="/DFH/js/DOMControls.js"></script>
+    <script src="/DFH/js/AppSettingsViews.js"></script>
+    <script src="/DFH/Client HTTP/HttpBaseClient.js"></script>
+    <script src="/DFH/Client HTTP/ServicioClient.js"></script>
+    <script>
+       
+        // Generar los formularios al cargar la página
+        document.addEventListener("DOMContentLoaded", function () {
+           const jsonData = AppSettingsViews.getConfigViewUrgencias();
+            DOMControls.generateForm(jsonData, "RegistrarUrgencia", "containerRU", [
+                "id",
+                "name",
+                "value",
+                "placeholder",
+                "type",
+                "required"
+            ]);
+            DOMControls.generateForm(jsonData, "RegistrarAtenciónPrimaria", "containerRAP", [
+                "id",
+                "name",
+                "value",
+                "placeholder",
+                "type",
+                "required"
+            ]);
+            DOMControls.generateForm(jsonData, "RegistrarAtenciónBox", "containerRAB", [
+                "id",
+                "name",
+                "value",
+                "placeholder",
+                "type",
+                "required"
+            ]);
+        });
+
+        function GETDATAFORMS() {
+            var nameContainers = ['containerRU', 'containerRAP', 'containerRAB']
+            const resultadoJSON = DOMControls.getValuesComponentsDOM(nameContainers);
+       
+            ServicioClient.ServiceCRUD('i',resultadoJSON);
+         
+        }
+         
+        document.querySelector('#urgenciaForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Previene la acción por defecto del formulario.
+    GETDATAFORMS(); // Llama a tu función de procesamiento.
+    const statusModal = new StatusModal('modalContainer');
+
+      // Supongamos que quieres mostrar un mensaje de éxito (código 200)
+      statusModal.show(201); // Puedes probar otros códigos como 201, 400, etc.
+});
+
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/CodeFlask.js/1.4.1/codeflask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>

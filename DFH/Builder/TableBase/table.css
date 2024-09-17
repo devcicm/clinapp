@@ -1,0 +1,79 @@
+ 
+/* Estilo del contenedor de la tabla */
+.table-container {
+    width: 74%;
+    overflow-x: auto; /* Permite el scroll horizontal si es necesario */
+    -webkit-overflow-scrolling: touch; /* Para un mejor scrolling en dispositivos táctiles */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Ancho mínimo de la tabla */
+}
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+tr:hover {
+    background-color: #f9f9f9;
+}
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+}
+.pagination a.active {
+    background-color: #0056b3;
+}
+.pagination a:hover {
+    background-color: #0056b3;
+}
+.btn-danger, .btn-save, .btn-cancel {
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+.btn-danger {
+    background-color: #dc3545;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+}
+.btn-save {
+    background-color: #28a745;
+}
+.btn-save:hover {
+    background-color: #218838;
+}
+.btn-cancel {
+    background-color: #6c757d;
+}
+.btn-cancel:hover {
+    background-color: #5a6268;
+}
+.hidden {
+    display: none;
+}
+.editing {
+    background-color: #e9ecef;
+}

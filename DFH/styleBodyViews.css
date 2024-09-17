@@ -1,0 +1,71 @@
+ /* Estilos CSS Básicos */
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+ 
+}
+
+.form-container {
+    background: #f7f6f5;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    /* Espacio entre los grupo-formulario */
+}
+
+.grupo-formulario {
+    flex: 1 1 calc(25% - 5px);
+    /* Ocupa 25% del ancho del contenedor menos el espacio entre elementos */
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Títulos centrados */
+.form-container h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #7ccdd2;
+    gap: 50px;
+ 
+    flex-wrap: wrap;
+}
+
+/* Barra de Progreso */
+.progreso {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.barra-progreso {
+    height: 20px;
+    background-color: #007bff;
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    transition: width 0.3s ease;
+}

@@ -1,0 +1,46 @@
+ async function consultarRun(run) {
+
+            const token = "123e4567-e89b-12d3-a456-426614174000"; // Reemplaza con tu token real
+            const url = 'https://api.devcicm.com/servicio/SoftHispan/apirest/search';
+            const requestBody = JSON.stringify({
+                run: run
+            });
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST', // Asegúrate de que el método coincide con el de tu API (puede ser GET o POST)
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}` // Incluir el token en el encabezado Authorization
+                    },
+                    credentials: 'include', // Si necesitas enviar cookies o credenciales
+                    body: requestBody
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const responseData = await response.json();
+
+                if (responseData.success) {
+                    // Extraer la propiedad 'json' del objeto 'data'
+                    const jsonContent = responseData.data.json;
+                    console.log(jsonContent);
+
+                    // Puedes parsear el contenido de 'json' si es necesario
+                    const parsedJsonContent = JSON.parse(jsonContent);
+
+                    // Aquí puedes realizar cualquier acción con la propiedad 'json'
+                    console.log('Propiedad json:', parsedJsonContent);
+
+                    return parsedJsonContent; // Retorna la propiedad 'json' parseada como un objeto
+                } else {
+                    console.error('Error en la respuesta:', responseData.message);
+                    return null;
+                }
+            } catch (error) {
+                console.error('Error en la consulta:', error);
+                return null;
+            }
+        }
